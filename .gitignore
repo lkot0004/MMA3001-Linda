@@ -1,0 +1,23 @@
+
+#python temporary files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+#notebook checkpoints
+.ipynb_checkpoints/
+
+#virtual environments
+.venv/
+venv/
+
+#local and sensitive files
+.env
+*.key
+
+#large raw sensor data
+*.zip
+
+#operating system files
+.DS_Store
+Thumbs.db
