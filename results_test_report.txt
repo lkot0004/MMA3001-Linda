@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-8.4.2, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content/MMA3001-Linda
+plugins: platformdirs-4.13.5, anyio-4.15.1, typeguard-4.6.0, langsmith-0.14.11
+collecting ... collected 12 items
+
+tests/test_reconstruction.py::test_error_metrics_exact_answer PASSED     [  8%]
+tests/test_reconstruction.py::test_perfect_prediction PASSED             [ 16%]
+tests/test_reconstruction.py::test_error_metrics_reject_mismatched_shapes PASSED [ 25%]
+tests/test_reconstruction.py::test_error_metrics_reject_nan PASSED       [ 33%]
+tests/test_reconstruction.py::test_error_metrics_reject_empty_arrays PASSED [ 41%]
+tests/test_reconstruction.py::test_reconstruction_on_linear_series PASSED [ 50%]
+tests/test_reconstruction.py::test_forward_fill_has_error_on_trend PASSED [ 58%]
+tests/test_reconstruction.py::test_reconstruction_does_not_modify_original PASSED [ 66%]
+tests/test_reconstruction.py::test_reject_gap_at_boundary PASSED         [ 75%]
+tests/test_reconstruction.py::test_reject_missing_input_data PASSED      [ 83%]
+tests/test_reconstruction.py::test_reject_unsorted_timestamps PASSED     [ 91%]
+tests/test_reconstruction.py::test_reject_zero_gap_length PASSED         [100%]
+
+============================== 12 passed in 0.85s ==============================
