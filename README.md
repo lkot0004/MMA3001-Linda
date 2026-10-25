@@ -14,6 +14,15 @@ The main objective is to assess the accuracy of the reconstructions, sensitivity
 The data used for ths analysis was obtained from the Monash Smart Infrastructure Occupancy and Environmental Dataset. The temperature observations were taken from the environemntal sensor records, cleaned up and then arranged chronologically.
 This investigation focuses on one sensor out of the several that were provided. Large raw datasets are not included in this repository.
 
+# Dataset access
+This project uses the environmental sensor archive supplied as Dataset 2 in the MMA3001 project materials.
+
+Required file: 5EnvSensor_MayToDec2024_180kRows (1).zip
+
+To reproduce the analysis, download the environmental archive from the official course dataset link, open Missing_Sensor_Data.ipynb in Google Colab and select the ZIP when prompted. No access to the author's personal Google Drive is required.
+
+The original dataset is not included in the public repository pending confirmation of redistribution permissions.
+
 ## Numerical Methodology
 Artificial gaps that contained 1,2,3,5 and 8 consecutinve observations were introduced into some observed temperature sequences. The three methods reconstructed the hidden measurements, which were then compared to the origional values using mean square error (MAE) and Root Mean Squared Error (RMSE).
 The development experiments used a sequence that had 66 observations. Independent validation then used two additional sequences that had 65 and 55 observations.
@@ -33,11 +42,11 @@ we clone the repository:
 git clone https://github.com/lkot0004/MMA3001-Linda.git
 cd MMA3001-Linda
 
-we install the dependencies:
-python -m pip install -r requirements
-
-then run the verification tests
-python -m pytest tests/ -v
+1. Install the dependencies using pip install -r requirements.txt.
+2. Obtain the original environmental sensor ZIP from the MMA3001 Dataset 2 course materials.
+3. Open Missing_Sensor_Data.ipynb in Google Colab.
+4. Select Runtime → Run all and upload the environmental ZIP when prompted.
+5. The notebook will reproduce the data preprocessing, reconstruction experiments, sensitivity analysis, held-out validation and runtime comparison. See examiner_dataset_and_run_instructions.md for additional details.
 
 The automated test suite had 12 tests that cover knwon numerical solutions, input validation and reconstruction behaviour. All 12 of them passed int eh verification run recorded.
 
